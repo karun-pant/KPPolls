@@ -14,6 +14,9 @@ import FirebaseFirestore
 @Observable
 class PollViewModel {
     
+    
+    let activityAuthInfo = ActivityAuthorizationInfo()
+    
     let db = Firestore.firestore()
     let pollId: String
     var poll: Poll? = nil
@@ -65,9 +68,10 @@ class PollViewModel {
     func startActivityIfNeeded() {
         guard let poll = poll,
               activity == nil,
-              ActivityAuthorizationInfo().frequentPushesEnabled else {
+              activityAuthInfo.frequentPushesEnabled else {
             return
         }
+        monitor()
         if let currentLivePollActivity = Activity<LivePollsAttributes>.activities.first(where: { $0.attributes.pollID == pollId }) {
             self.activity = currentLivePollActivity
         } else {
@@ -97,4 +101,30 @@ class PollViewModel {
             }
         }
     }
+    
+    func monitor() {
+        Task {
+            for await isLiveActivityEnabled in activityAuthInfo.activityEnablementUpdates {
+                print("current enabled status: \(isLiveActivityEnabled ? "Enabled" : "Disabled")", Date(), to: &Log.log)
+            }
+        }
+    }
+}
+
+class Log: TextOutputStream {
+
+    func write(_ string: String) {
+        let fm = FileManager.default
+        let log = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("log.txt")
+        print("Path: \(log.absoluteString)")
+        if let handle = try? FileHandle(forWritingTo: log) {
+            handle.seekToEndOfFile()
+            handle.write(string.data(using: .utf8)!)
+            handle.closeFile()
+        } else {
+            try? string.data(using: .utf8)?.write(to: log)
+        }
+    }
+    static var log: Log = Log()
+    private init() {} // we are sure, nobody else could create it
 }

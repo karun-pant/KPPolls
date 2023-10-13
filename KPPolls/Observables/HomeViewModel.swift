@@ -42,6 +42,10 @@ class HomeViewModel {
     }
     
     
+    @MainActor
+    func listenUserUpdates() {
+        
+    }
     
     @MainActor
     func listenLivePolls() {

@@ -10,7 +10,6 @@
 		C04099932A63FB41006CD25E /* PollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04099922A63FB41006CD25E /* PollView.swift */; };
 		C04099952A63FB4B006CD25E /* PollVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04099942A63FB4B006CD25E /* PollVM.swift */; };
 		C067D60D2A62DF7A008BE894 /* KPPollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067D60C2A62DF7A008BE894 /* KPPollsApp.swift */; };
-		C067D60F2A62DF7A008BE894 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067D60E2A62DF7A008BE894 /* ContentView.swift */; };
 		C067D6112A62DF7B008BE894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C067D6102A62DF7B008BE894 /* Assets.xcassets */; };
 		C067D6142A62DF7B008BE894 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C067D6132A62DF7B008BE894 /* Preview Assets.xcassets */; };
 		C067D61C2A62E154008BE894 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C067D61B2A62E154008BE894 /* FirebaseFirestore */; };
@@ -65,7 +64,6 @@
 		C04099942A63FB4B006CD25E /* PollVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollVM.swift; sourceTree = "<group>"; };
 		C067D6092A62DF7A008BE894 /* KPPolls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPPolls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C067D60C2A62DF7A008BE894 /* KPPollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPPollsApp.swift; sourceTree = "<group>"; };
-		C067D60E2A62DF7A008BE894 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C067D6102A62DF7B008BE894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C067D6132A62DF7B008BE894 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C067D6222A62EF5D008BE894 /* PollsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsModel.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				C067D6242A62F383008BE894 /* Views */,
 				C067D6212A62EF46008BE894 /* Models */,
 				C067D60C2A62DF7A008BE894 /* KPPollsApp.swift */,
-				C067D60E2A62DF7A008BE894 /* ContentView.swift */,
 				C067D6102A62DF7B008BE894 /* Assets.xcassets */,
 				C0DC26AC2A64294100C8AC80 /* GoogleService-Info.plist */,
 				C067D6122A62DF7B008BE894 /* Preview Content */,
@@ -322,7 +319,6 @@
 				C04099952A63FB4B006CD25E /* PollVM.swift in Sources */,
 				C067D6262A62F392008BE894 /* HomeView.swift in Sources */,
 				C0DC26D32A6432F000C8AC80 /* LivePollsAttributes.swift in Sources */,
-				C067D60F2A62DF7A008BE894 /* ContentView.swift in Sources */,
 				C04099932A63FB41006CD25E /* PollView.swift in Sources */,
 				C067D6292A62F3BD008BE894 /* HomeViewModel.swift in Sources */,
 				C073896C2A63D8D400DB31E0 /* PollChartView.swift in Sources */,
